@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+}
+.cont{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-gap: 10px;
+}
+.item{
+    background-color: lightseagreen;
+    padding: 10px;
+    border: 1px solid black;
+}
