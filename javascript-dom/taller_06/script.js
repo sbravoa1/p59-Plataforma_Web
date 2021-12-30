@@ -1,14 +1,12 @@
-function agregar_elemento(){
-    var texto= document.getElementById('texto')
-    
-    var h1= document.createElement('h1')
-    var contenido = document.createTextNode(texto.value)
-    h1.appendChild(contenido)
+function opcion(elemento){
+    var opcion1=document.getElementById('opcion1')
+    var opcion2=document.getElementById('opcion2')
 
-    var container = document.getElementById('container');
-    container.appendChild(h1)
-}
-function eliminar_elemento(){
-    var container=document.getElementById('container')
-    container.removeChild(container.lastChild)
+    if(elemento == 1){
+        opcion1.style.zIndex = 2
+        opcion2.style.zIndex = 1
+    }else if(elemento == 2){
+        opcion1.style.zIndex = 1
+        opcion2.style.zIndex = 2
+    }
 }
