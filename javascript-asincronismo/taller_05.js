@@ -1,10 +1,13 @@
 const fetch = require('./utils/fetch')
-const API = 'https://rickandmortyapi.com/api/character'
+const API = 'https://rickandmortyapi.com/api/character/'
 
-function obtenerPersonaje(id){
+function obtenerPersonaje(id) {
     return fetch(`${API}${id}`)
 }
-obtenerPersonaje(1)
-    .then((dato)=>{
-        console.log(dato.name)
-    })
+
+for ( let i=1; i<=10; i++ ) {
+    obtenerPersonaje(i)
+        .then( (datos) => {
+            console.log( datos.id ) + console.log( datos.name )
+        } )
+}
