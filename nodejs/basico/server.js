@@ -1,9 +1,16 @@
 const express = require('express')
+const router= express.Router()
 
 let app=express()
 
-app.use('/', function(req,res){
-    res.send('hola mundo')
+app.use(router)
+
+router.get('/',function(req,res){
+    res.send('hola mundo desde get')
+})
+
+router.post('/',function(req,res){
+    res.send('hola mundo desde get')
 })
 
 let puerto=8000
