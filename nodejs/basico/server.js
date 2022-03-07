@@ -13,7 +13,7 @@ app.use(bodyParse.urlencoded( {extended:false} ) )
 app.use(router)
 
 router.get('/mensaje',function(req,res){
-    if(req.query.error == 'ok'){
+    if(req.query.error =='ok'){
         response.success(req,res,'error desde get')
     }else{
         response.success(req,res,'hola desde get')
@@ -22,6 +22,7 @@ router.get('/mensaje',function(req,res){
 })
 
 router.post('/mensaje',function(req,res){
+    
     response.success(req,res,'hola desde post')
 })
 
@@ -29,7 +30,7 @@ router.delete('/mensaje', function(req,res){
     response.success(req,res,'hola desde delete')
 })
 
-app.use('/', express.static('public'))
+app.use('/', express.static('publicc'))
 
 
 let puerto=8000
